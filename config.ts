@@ -1,5 +1,5 @@
 const config = {
-  baseUrl: "https://example.com",
+  baseUrl: "https://typography-showcase.vercel.app",
   appName: "Typography Showcase",
   appDescription: "A gallery of beautiful fonts",
   creator: "Jitendra Nirnejak",
