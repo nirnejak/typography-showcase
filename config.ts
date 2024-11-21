@@ -5,20 +5,9 @@ const config = {
   creator: "Jitendra Nirnejak",
   authorName: "Jitendra Nirnejak",
   authorUrl: "https://nirnejak.com/",
-  keywords: [
-    "Remix",
-    "React",
-    "Vite",
-    "TypeScript",
-    "JavaScript",
-    "TailwindCSS",
-    "Framer Motion",
-    "Akar Icons",
-    "ESLint",
-    "Prettier",
-  ],
+  keywords: ["Typography", "Showcase", "Animation", "Motion", "Framer Motion"],
   twitterSite: "@site",
-  twitterCreator: "@creator",
+  twitterCreator: "@jeetnirnejak",
 }
 
 export default config
