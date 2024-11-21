@@ -32,7 +32,7 @@ const Index: React.FC = () => {
 
   const scrollDown = (): void => {
     window.scrollBy({
-      top: isEnd ? -window.innerHeight : window.innerHeight,
+      top: isEnd ? 0 : window.innerHeight,
       behavior: "smooth",
     })
   }
