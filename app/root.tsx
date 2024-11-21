@@ -53,12 +53,34 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+        <meta name="application-name" content={config.appName} />
+        <meta name="author" content={config.authorName} />
+        <meta name="creator" content={config.creator} />
+        <meta name="keywords" content={config.keywords.join(",")} />
+
+        <meta name="theme-color" content="#000000" />
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+        <meta
+          name="format-detection"
+          content="telephone=no, date=no, address=no, email=no, url=no"
+        />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-title" content={config.appName} />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
+
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Typography Showcase" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@jeetnirnejak" />
-        <meta name="twitter:creator" content="@jeetnirnejak" />
+        <meta name="twitter:site" content={config.twitterSite} />
+        <meta name="twitter:creator" content={config.twitterCreator} />
+
         <Meta />
         <Links />
       </head>

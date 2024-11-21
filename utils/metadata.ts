@@ -21,27 +21,6 @@ export const generateMetadata = ({
     { title: metaTitle },
     { name: "description", content: metaDescription },
 
-    { name: "application-name", content: config.appName },
-    { name: "author", content: config.authorName },
-    { name: "creator", content: config.creator },
-    { name: "keywords", content: config.keywords.join(",") },
-    { name: "theme-color", content: "#000000" },
-    {
-      name: "robots",
-      content:
-        "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-    },
-    {
-      name: "format-detection",
-      content: "telephone=no, date=no, address=no, email=no, url=no",
-    },
-    { name: "apple-mobile-web-app-capable", content: "yes" },
-    { name: "apple-mobile-web-app-title", content: config.appName },
-    {
-      name: "apple-mobile-web-app-status-bar-style",
-      content: "black-translucent",
-    },
-
     { name: "og:title", content: metaTitle },
     { name: "og:description", content: metaDescription },
     { name: "og:image", content: metaImage },

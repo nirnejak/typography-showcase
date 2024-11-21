@@ -6,7 +6,7 @@ const config = {
   authorName: "Jitendra Nirnejak",
   authorUrl: "https://nirnejak.com/",
   keywords: ["Typography", "Showcase", "Animation", "Motion", "Framer Motion"],
-  twitterSite: "@site",
+  twitterSite: "@jeetnirnejak",
   twitterCreator: "@jeetnirnejak",
 }
 
