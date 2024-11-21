@@ -1,9 +1,10 @@
 import type * as React from "react"
 
 import type { MetaFunction } from "@remix-run/node"
-import * as motion from "framer-motion/client"
+import { motion } from "framer-motion"
 import { BASE_TRANSITION } from "utils/animation"
 
+import ParallaxText from "@/components/Text"
 import { generateMetadata } from "@/utils/metadata"
 
 export const meta: MetaFunction = () =>
@@ -15,7 +16,7 @@ export const meta: MetaFunction = () =>
 
 const Index: React.FC = () => {
   return (
-    <main className="grid min-h-screen place-content-center">
+    <main className="grid h-[200vh] min-h-screen place-content-center">
       <motion.h1
         initial={{ translateY: 20, opacity: 0 }}
         animate={{ translateY: 0, opacity: 1 }}
@@ -24,6 +25,10 @@ const Index: React.FC = () => {
       >
         Typography Showcase
       </motion.h1>
+      <div className="fixed bottom-0">
+        <ParallaxText baseVelocity={-5}>Framer Motion</ParallaxText>
+        <ParallaxText baseVelocity={5}>Scroll velocity</ParallaxText>
+      </div>
     </main>
   )
 }
