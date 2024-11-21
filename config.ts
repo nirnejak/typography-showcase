@@ -19,5 +19,6 @@ const config = {
   ],
   twitterSite: "@site",
   twitterCreator: "@creator",
-};
-export default config;
+}
+
+export default config

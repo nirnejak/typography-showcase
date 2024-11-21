@@ -1,18 +1,22 @@
-import type { MetaFunction } from "@remix-run/node";
+import type * as React from "react"
+
+import type { MetaFunction } from "@remix-run/node"
 
 export const meta: MetaFunction = () => {
   return [
     { title: "Typography Showcase" },
     { name: "description", content: "A gallery of beautiful fonts" },
-  ];
-};
+  ]
+}
 
-export default function Index() {
+const Index: React.FC = () => {
   return (
-    <main className="grid place-content-center min-h-screen">
-      <h1 className="md:text-5xl text-3xl tracking-tighter font-bold">
+    <main className="grid min-h-screen place-content-center">
+      <h1 className="text-3xl font-bold tracking-tighter md:text-5xl">
         Typography Showcase
       </h1>
     </main>
-  );
+  )
 }
+
+export default Index
