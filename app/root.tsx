@@ -37,7 +37,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-black text-white">
         {children}
         <ScrollRestoration />
         <Scripts />
