@@ -8,19 +8,19 @@
 
 **Run the dev server:**
 
-```shellscript
+```bash
 npm run dev
 ```
 
 **Lint all the files:**
 
-```shellscript
+```bash
 npm run lint
 ```
 
 **Format all files with Prettier:**
 
-```shellscript
+```bash
 npm run format
 ```
 
