@@ -20,3 +20,7 @@ body {
   @apply bg-zinc-600 text-white;
   -webkit-text-fill-color: white;
 }
+
+* {
+  @apply antialiased;
+}
