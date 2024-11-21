@@ -12,9 +12,11 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@motionone/utils": "^10.18.0",
     "@remix-run/node": "^2.13.1",
     "@remix-run/react": "^2.13.1",
     "@remix-run/serve": "^2.13.1",
+    "akar-icons": "^1.9.31",
     "framer-motion": "^11.11.17",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
