@@ -2,12 +2,14 @@ import type * as React from "react"
 
 import type { MetaFunction } from "@remix-run/node"
 
-export const meta: MetaFunction = () => {
-  return [
-    { title: "Typography Showcase" },
-    { name: "description", content: "A gallery of beautiful fonts" },
-  ]
-}
+import { generateMetadata } from "@/utils/metadata"
+
+export const meta: MetaFunction = () =>
+  generateMetadata({
+    path: "/",
+    title: "Typography Showcase",
+    description: "A gallery of beautiful fonts",
+  })
 
 const Index: React.FC = () => {
   return (
