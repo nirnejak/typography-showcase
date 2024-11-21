@@ -9,6 +9,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react"
 
+import config from "../config"
+
 import "./tailwind.css"
 
 export const links: LinksFunction = () => [
@@ -22,6 +24,22 @@ export const links: LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
+  {
+    rel: "author",
+    href: config.authorUrl,
+  },
+  {
+    rel: "manifest",
+    href: `${config.baseUrl}/manifest.json`,
+    crossOrigin: "use-credentials",
+  },
+  {
+    rel: "apple-touch-startup-image",
+    href: `${config.baseUrl}/cover.png`,
+  },
+  { rel: "icon", href: "/favicon.ico" },
+  { rel: "shortcut icon", href: "/icons/icon-512x512.png" },
+  { rel: "apple-touch-icon", href: "/icons/icon-512x512.png" },
 ]
 
 export const Layout: React.FC<{ children: React.ReactNode }> = ({
@@ -34,6 +52,13 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Typography Showcase" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@jeetnirnejak" />
+        <meta name="twitter:creator" content="@jeetnirnejak" />
         <Meta />
         <Links />
       </head>
