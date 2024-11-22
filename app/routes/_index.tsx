@@ -30,7 +30,7 @@ const Index: React.FC = () => {
     }
   }, [])
 
-  const scrollDown = (): void => {
+  const scroll = (): void => {
     window.scrollBy({
       top: isEnd ? 0 : window.innerHeight,
       behavior: "smooth",
@@ -45,7 +45,7 @@ const Index: React.FC = () => {
       <button
         className="fixed bottom-4 right-0 size-10"
         onClick={() => {
-          scrollDown()
+          scroll()
         }}
       >
         <svg
