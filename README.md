@@ -9,25 +9,25 @@
 **Run the dev server:**
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 **Lint all the files:**
 
 ```bash
-npm run lint
+bun run lint
 ```
 
 **Format all files with Prettier:**
 
 ```bash
-npm run format
+bun run format
 ```
 
 **Check TypeScript issues**
 
 ```bash
-npm run type-check
+bun run type-check
 ```
 
 ## Deployment
@@ -35,11 +35,11 @@ npm run type-check
 First, build your app for production:
 
 ```sh
-npm run build
+bun run build
 ```
 
 Then run the app in production mode:
 
 ```sh
-npm start
+bun start
 ```
