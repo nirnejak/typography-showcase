@@ -9,7 +9,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react"
 
-import config from "../config"
+import config from "@/config"
 
 import "./tailwind.css"
 
