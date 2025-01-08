@@ -13,16 +13,11 @@
   },
   "dependencies": {
     "@motionone/utils": "^10.18.0",
-    "@remix-run/node": "^2.15.2",
-    "@remix-run/react": "^2.15.2",
-    "@remix-run/serve": "^2.15.2",
     "framer-motion": "^11.15.0",
-    "isbot": "^5.1.19",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@remix-run/dev": "^2.15.2",
     "@tailwindcss/typography": "^0.5.15",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
@@ -49,9 +44,7 @@
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.7.2",
-    "vite": "^6.0.7",
-    "vite-tsconfig-paths": "^5.1.4"
+    "typescript": "^5.7.2"
   },
   "engines": {
     "node": ">=20.0.0"
