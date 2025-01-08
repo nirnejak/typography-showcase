@@ -3,7 +3,7 @@ import * as React from "react"
 import type { Viewport } from "next"
 import { ViewTransitions } from "next-view-transitions"
 
-import { Inter } from "next/font/google"
+import { Inter, JetBrains_Mono } from "next/font/google"
 import localFont from "next/font/local"
 
 import classNames from "@/utils/classNames"
@@ -16,15 +16,9 @@ const sansFont = Inter({
   subsets: ["latin"],
 })
 
-const monoFont = localFont({
+const monoFont = JetBrains_Mono({
   variable: "--mono-font",
-  src: [
-    {
-      path: "../fonts/JetBrainsMono-Regular.ttf",
-      weight: "regular",
-      style: "normal",
-    },
-  ],
+  subsets: ["latin"],
 })
 
 export const viewport: Viewport = {
