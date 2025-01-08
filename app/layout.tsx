@@ -23,6 +23,7 @@ const monoFont = JetBrains_Mono({
 const plasterFont = Plaster({
   variable: "--plaster-font",
   weight: "400",
+  subsets: ["latin"],
 })
 
 export const viewport: Viewport = {
