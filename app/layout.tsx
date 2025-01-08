@@ -3,7 +3,7 @@ import * as React from "react"
 import type { Viewport } from "next"
 import { ViewTransitions } from "next-view-transitions"
 
-import { Inter, JetBrains_Mono } from "next/font/google"
+import { Inter, JetBrains_Mono, Plaster } from "next/font/google"
 import localFont from "next/font/local"
 
 import classNames from "@/utils/classNames"
@@ -19,6 +19,11 @@ const sansFont = Inter({
 const monoFont = JetBrains_Mono({
   variable: "--mono-font",
   subsets: ["latin"],
+})
+
+const plasterFont = Plaster({
+  variable: "--plaster-font",
+  weight: "400",
 })
 
 export const viewport: Viewport = {
@@ -39,6 +44,7 @@ const RootLayout: React.FC<Props> = ({ children }) => {
           className={classNames(
             sansFont.variable,
             monoFont.variable,
+            plasterFont.variable,
             "overflow-x-hidden bg-zinc-50 dark:bg-zinc-900 font-sans"
           )}
         >

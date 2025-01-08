@@ -104,7 +104,7 @@ const config: Config = {
     fontFamily: {
       sans: ["var(--sans-font)"],
       mono: ["var(--mono-font)"],
-      plaster: ["Plaster", "ui-sans-serif", "system-ui", "sans-serif"],
+      plaster: ["var(--plaster-font)"],
     },
   },
   variants: {
