@@ -4,21 +4,33 @@
 
 ---
 
-## Development
+## Available Scripts
 
-**Run the dev server:**
+**Install Dependencies**
+
+```bash
+bun install
+```
+
+**Setup Pre-commit**
+
+```bash
+npm run prepare
+```
+
+**Start Development Server**
 
 ```bash
 bun run dev
 ```
 
-**Lint all the files:**
+**Lint all the files**
 
 ```bash
 bun run lint
 ```
 
-**Format all files with Prettier:**
+**Format all files with Prettier**
 
 ```bash
 bun run format
@@ -30,16 +42,16 @@ bun run format
 bun run type-check
 ```
 
-## Deployment
+**Build for Production**
 
-First, build your app for production:
-
-```sh
+```bash
 bun run build
 ```
 
-Then run the app in production mode:
+**Start Production Server**
 
-```sh
+```bash
 bun start
 ```
+
+---
