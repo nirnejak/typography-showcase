@@ -9,5 +9,4 @@ const config = {
   twitterSite: "@jeetnirnejak",
   twitterCreator: "@jeetnirnejak",
 }
-
 export default config
