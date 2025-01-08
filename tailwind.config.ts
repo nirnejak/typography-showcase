@@ -102,7 +102,8 @@ const config: Config = {
       },
     },
     fontFamily: {
-      sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+      sans: ["var(--sans-font)"],
+      mono: ["var(--mono-font)"],
       plaster: ["Plaster", "ui-sans-serif", "system-ui", "sans-serif"],
     },
   },
