@@ -4,7 +4,6 @@ import type { Viewport } from "next"
 import { ViewTransitions } from "next-view-transitions"
 
 import { Inter, JetBrains_Mono, Plaster } from "next/font/google"
-import localFont from "next/font/local"
 
 import classNames from "@/utils/classNames"
 import { renderSchemaTags } from "@/utils/schema"
@@ -45,7 +44,7 @@ const RootLayout: React.FC<Props> = ({ children }) => {
             sansFont.variable,
             monoFont.variable,
             plasterFont.variable,
-            "overflow-x-hidden bg-zinc-50 dark:bg-zinc-900 font-sans"
+            "overflow-x-hidden bg-white dark:bg-black font-sans text-black dark:text-white"
           )}
         >
           {children}
