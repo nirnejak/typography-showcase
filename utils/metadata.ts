@@ -1,4 +1,6 @@
-import config from "@/config"
+import { type Metadata } from "next"
+
+import config from "../config"
 
 interface MetadataArgs {
   path: string
@@ -12,22 +14,64 @@ export const generateMetadata = ({
   title,
   description,
   image,
-}: MetadataArgs): any => {
+}: MetadataArgs): Metadata => {
   const metaTitle = title
   const metaDescription = description
   const metaImage = image ?? `${config.baseUrl}/cover.png`
 
-  return [
-    { title: metaTitle },
-    { name: "description", content: metaDescription },
+  const metadata: Metadata = {
+    title: metaTitle,
+    description: metaDescription,
 
-    { name: "og:title", content: metaTitle },
-    { name: "og:description", content: metaDescription },
-    { name: "og:image", content: metaImage },
-    { name: "og:url", content: `${config.baseUrl}${path}` },
+    applicationName: config.appName,
+    creator: config.creator,
+    authors: [{ name: config.authorName, url: config.authorUrl }],
+    robots:
+      "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    keywords: config.keywords,
 
-    { name: "twitter:title", content: metaTitle },
-    { name: "twitter:description", content: metaDescription },
-    { name: "twitter:image", content: metaImage },
-  ]
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/icons/icon-512x512.png",
+      apple: "/icons/icon-512x512.png",
+    },
+    manifest: `${config.baseUrl}/manifest.json`,
+
+    openGraph: {
+      type: "website",
+      url: `${config.baseUrl}${path}`,
+      siteName: "<Site Name>",
+      title: metaTitle,
+      description: metaDescription,
+      images: metaImage,
+      // videos: "",  // INFO: og video option
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      site: config.twitterSite,
+      creator: config.twitterCreator,
+      title: metaTitle,
+      description: metaDescription,
+      images: metaImage,
+    },
+
+    appleWebApp: {
+      capable: true,
+      title: metaTitle,
+      startupImage: metaImage,
+      statusBarStyle: "black-translucent",
+    },
+
+    formatDetection: {
+      telephone: true,
+      date: true,
+      address: true,
+      email: true,
+      url: true,
+    },
+
+    appLinks: {},
+  }
+  return metadata
 }
