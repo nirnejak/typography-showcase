@@ -37,17 +37,17 @@ interface Props {
 const RootLayout: React.FC<Props> = ({ children }) => {
   return (
     <ViewTransitions>
-      <html lang="en">
+      <html
+        lang="en"
+        className={classNames(
+          sansFont.variable,
+          monoFont.variable,
+          plasterFont.variable
+        )}
+      >
         <head>{renderSchemaTags()}</head>
 
-        <body
-          className={classNames(
-            sansFont.variable,
-            monoFont.variable,
-            plasterFont.variable,
-            "overflow-x-hidden bg-white dark:bg-black font-sans text-black dark:text-white"
-          )}
-        >
+        <body className="overflow-x-hidden bg-white dark:bg-black font-sans text-black dark:text-white">
           {children}
         </body>
       </html>
