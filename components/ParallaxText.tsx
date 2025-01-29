@@ -10,7 +10,7 @@ import {
   useMotionValue,
   useVelocity,
   useAnimationFrame,
-} from "framer-motion"
+} from "motion/react"
 
 interface ParallaxProps {
   children: string
