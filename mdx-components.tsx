@@ -14,7 +14,12 @@ interface Props {
 
 const MDXWrapper: React.FC<Props> = ({ children }) => {
   return (
-    <main className="mx-auto w-full max-w-[580px] px-4 md:px-0">
+    <main
+      className="
+        mx-auto w-full max-w-[580px] px-4
+        md:px-0
+      "
+    >
       <motion.article
         initial={{ translateY: 10, opacity: 0 }}
         animate={{ translateY: 0, opacity: 1 }}
@@ -57,7 +62,12 @@ const components: MDXComponents = {
     if (isInline) {
       return (
         <code
-          className="rounded bg-neutral-100 px-1.5 py-0.5 font-semibold text-green-600 before:hidden after:hidden dark:bg-neutral-950 dark:text-green-400"
+          className="
+            rounded-sm bg-neutral-100 px-1.5 py-0.5 font-semibold text-green-600
+            before:hidden
+            after:hidden
+            dark:bg-neutral-950 dark:text-green-400
+          "
           {...props}
         >
           {(children as string).replaceAll("`", "")}
@@ -76,7 +86,10 @@ const components: MDXComponents = {
       return (
         <Link
           href={href}
-          className={"underline underline-offset-2 hover:no-underline"}
+          className={`
+            underline underline-offset-2
+            hover:no-underline
+          `}
           {...props}
         >
           {children}
@@ -87,7 +100,10 @@ const components: MDXComponents = {
       return (
         <a
           href={href}
-          className={"underline underline-offset-2 hover:no-underline"}
+          className={`
+            underline underline-offset-2
+            hover:no-underline
+          `}
           {...props}
         >
           {children}
@@ -99,7 +115,10 @@ const components: MDXComponents = {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={"underline underline-offset-2 hover:no-underline"}
+        className={`
+          underline underline-offset-2
+          hover:no-underline
+        `}
         {...props}
       >
         {children}

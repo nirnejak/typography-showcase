@@ -15,7 +15,12 @@ export const metadata: Metadata = generateMetadata({
 const Home: React.FC = () => {
   return (
     <main className="h-[200vh]">
-      <h1 className="fixed bottom-4 left-4 text-3xl font-bold tracking-tighter md:text-5xl">
+      <h1
+        className="
+          fixed bottom-4 left-4 text-3xl font-bold tracking-tighter
+          md:text-5xl
+        "
+      >
         Typography Showcase
       </h1>
 

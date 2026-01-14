@@ -27,7 +27,7 @@ const BackTopButton: React.FC = () => {
 
   return (
     <button
-      className="fixed bottom-4 right-0 size-10"
+      className="fixed right-0 bottom-4 size-10"
       onClick={() => {
         scroll()
       }}

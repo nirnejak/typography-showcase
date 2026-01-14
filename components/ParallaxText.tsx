@@ -66,9 +66,16 @@ const ParallaxText: React.FC<ParallaxProps> = ({
    * dynamically generated number of children.
    */
   return (
-    <div className="m-0 flex flex-nowrap overflow-hidden whitespace-nowrap font-plaster leading-[0.8] tracking-tight">
+    <div
+      className="
+        m-0 flex flex-nowrap overflow-hidden font-plaster leading-[0.8]
+        tracking-tight whitespace-nowrap
+      "
+    >
       <motion.div
-        className="flex flex-nowrap whitespace-nowrap text-7xl font-semibold uppercase"
+        className="
+          flex flex-nowrap text-7xl font-semibold whitespace-nowrap uppercase
+        "
         style={{ x }}
       >
         <span className="mr-8 block">{children} </span>
