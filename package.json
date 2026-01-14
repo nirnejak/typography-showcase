@@ -8,8 +8,10 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,mdx}\"",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "type-check": "tsc --pretty --noEmit",
     "prepare": "husky"
   },
@@ -29,8 +31,6 @@
     "use-sound": "^5.0.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.1",
-    "@eslint/js": "^9.34.0",
     "@tailwindcss/postcss": "^4.1.12",
     "@tailwindcss/typography": "^0.5.16",
     "@types/mdx": "^2.0.13",
@@ -38,24 +38,20 @@
     "@types/react": "^19.1.12",
     "babel-plugin-react-compiler": "^1.0.0",
     "eslint": "^9.34.0",
-    "eslint-config-love": "^122.0.0",
-    "eslint-config-next": "^15.5.2",
+    "eslint-config-next": "^16.1.1",
     "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-better-tailwindcss": "^4.0.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-n": "^17.21.3",
-    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-promise": "^7.2.1",
-    "eslint-plugin-tailwindcss": "^3.18.2",
-    "globals": "^16.3.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.6",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
-    "prettier-plugin-tailwindcss": "^0.6.14",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "shiki": "^3.12.2",
     "tailwindcss": "^4.1.12",
-    "typescript": "^5.9.2",
-    "typescript-eslint": "^8.42.0"
+    "typescript": "^5.9.2"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "eslint"
