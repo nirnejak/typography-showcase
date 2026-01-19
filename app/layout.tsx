@@ -8,7 +8,7 @@ import { Inter, JetBrains_Mono, Plaster } from "next/font/google"
 import classNames from "@/utils/classNames"
 import { renderSchemaTags } from "@/utils/schema"
 
-import "../styles/main.css"
+import "./main.css"
 
 const sansFont = Inter({
   variable: "--sans-font",
