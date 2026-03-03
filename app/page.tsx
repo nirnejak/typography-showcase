@@ -1,10 +1,8 @@
-import * as React from "react"
-
 import type { Metadata } from "next"
-
-import { generateMetadata } from "@/utils/metadata"
-import ParallaxText from "@/components/ParallaxText"
+import type * as React from "react"
 import BackTopButton from "@/components/BackTopButton"
+import ParallaxText from "@/components/ParallaxText"
+import { generateMetadata } from "@/utils/metadata"
 
 export const metadata: Metadata = generateMetadata({
   path: "/",
@@ -15,12 +13,7 @@ export const metadata: Metadata = generateMetadata({
 const Home: React.FC = () => {
   return (
     <main className="h-[200vh]">
-      <h1
-        className="
-          fixed bottom-4 left-4 text-3xl font-bold tracking-tighter
-          md:text-5xl
-        "
-      >
+      <h1 className="fixed bottom-4 left-4 font-bold text-3xl tracking-tighter md:text-5xl">
         Typography Showcase
       </h1>
 

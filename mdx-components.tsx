@@ -1,8 +1,8 @@
-import * as React from "react"
+import type { MDXComponents } from "mdx/types"
 
 import * as motion from "motion/react-client"
-import type { MDXComponents } from "mdx/types"
 import Link from "next/link"
+import type * as React from "react"
 import { codeToHtml } from "shiki"
 
 import { BASE_TRANSITION } from "./utils/animation"
@@ -14,30 +14,25 @@ interface Props {
 
 const MDXWrapper: React.FC<Props> = ({ children }) => {
   return (
-    <main
-      className="
-        mx-auto w-full max-w-145 px-4
-        md:px-0
-      "
-    >
+    <main className="mx-auto w-full max-w-145 px-4 md:px-0">
       <motion.article
         initial={{ translateY: 10, opacity: 0 }}
         animate={{ translateY: 0, opacity: 1 }}
         transition={{ delay: 0.3, ...BASE_TRANSITION }}
         className={classNames(
-          "mb-24 prose prose-neutral dark:prose-invert prose:leading-snug prose:tracking-tight",
+          "prose prose-neutral dark:prose-invert mb-24 prose:leading-snug prose:tracking-tight",
           "prose-p:opacity-85 dark:prose-p:opacity-80",
           "prose-blockquote:opacity-85 dark:prose-blockquote:opacity-80",
           "prose-headings:font-semibold prose-headings:opacity-85 dark:prose-headings:opacity-80",
-          "prose-h1:tracking-tight prose-h1:mt-24 prose-h1:mb-0 prose-h1:text-3xl prose-h1:leading-snug",
+          "prose-h1:mt-24 prose-h1:mb-0 prose-h1:text-3xl prose-h1:leading-snug prose-h1:tracking-tight",
 
-          "md:prose-img:scale-125 md:prose-img:my-28 prose-img:mx-auto",
-          "prose-pre:p-0 prose-pre:bg-black prose-code:text-sm prose-pre:px-3",
-          "prose-table:rounded-xl prose-table:overflow-hidden",
+          "prose-img:mx-auto md:prose-img:my-28 md:prose-img:scale-125",
+          "prose-pre:bg-black prose-pre:p-0 prose-pre:px-3 prose-code:text-sm",
+          "prose-table:overflow-hidden prose-table:rounded-xl",
           "prose-thead:border-neutral-300 prose-tr:border-neutral-300 dark:prose-thead:border-neutral-900 dark:prose-tr:border-neutral-900",
-          "prose-th:bg-neutral-200 dark:prose-th:text-neutral-50 dark:prose-th:bg-neutral-900/60",
+          "prose-th:bg-neutral-200 dark:prose-th:bg-neutral-900/60 dark:prose-th:text-neutral-50",
           "prose-tr:bg-neutral-100 dark:prose-tr:bg-neutral-800",
-          "prose-th:py-3.5 prose-th:px-3 prose-td:py-3.5 prose-td:px-3"
+          "prose-td:px-3 prose-th:px-3 prose-td:py-3.5 prose-th:py-3.5"
         )}
       >
         {children}
@@ -62,18 +57,14 @@ const components: MDXComponents = {
     if (isInline) {
       return (
         <code
-          className="
-            rounded-sm bg-neutral-100 px-1.5 py-0.5 font-semibold text-green-600
-            before:hidden
-            after:hidden
-            dark:bg-neutral-950 dark:text-green-400
-          "
+          className="rounded-sm bg-neutral-100 px-1.5 py-0.5 font-semibold text-green-600 before:hidden after:hidden dark:bg-neutral-950 dark:text-green-400"
           {...props}
         >
           {(children as string).replaceAll("`", "")}
         </code>
       )
     } else {
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: syntax highlighted HTML from shiki
       return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
     }
   },
@@ -86,10 +77,7 @@ const components: MDXComponents = {
       return (
         <Link
           href={href}
-          className={`
-            underline underline-offset-2
-            hover:no-underline
-          `}
+          className={`underline underline-offset-2 hover:no-underline`}
           {...props}
         >
           {children}
@@ -100,10 +88,7 @@ const components: MDXComponents = {
       return (
         <a
           href={href}
-          className={`
-            underline underline-offset-2
-            hover:no-underline
-          `}
+          className={`underline underline-offset-2 hover:no-underline`}
           {...props}
         >
           {children}
@@ -115,10 +100,7 @@ const components: MDXComponents = {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={`
-          underline underline-offset-2
-          hover:no-underline
-        `}
+        className={`underline underline-offset-2 hover:no-underline`}
         {...props}
       >
         {children}

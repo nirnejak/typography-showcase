@@ -27,6 +27,7 @@ const BackTopButton: React.FC = () => {
 
   return (
     <button
+      type="button"
       className="fixed right-0 bottom-4 size-10"
       onClick={() => {
         scroll()
@@ -37,6 +38,7 @@ const BackTopButton: React.FC = () => {
         height="32"
         viewBox="0 0 22 32"
         fill="none"
+        aria-label="Scroll"
         className={classNames(
           "transition-transform",
           isEnd ? "rotate-180" : ""

@@ -1,16 +1,16 @@
 "use client"
-import * as React from "react"
 
 import { wrap } from "@motionone/utils"
 import {
   motion,
+  useAnimationFrame,
+  useMotionValue,
   useScroll,
   useSpring,
   useTransform,
-  useMotionValue,
   useVelocity,
-  useAnimationFrame,
 } from "motion/react"
+import * as React from "react"
 
 interface ParallaxProps {
   children: string
@@ -40,7 +40,7 @@ const ParallaxText: React.FC<ParallaxProps> = ({
   const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`)
 
   const directionFactor = React.useRef<number>(1)
-  useAnimationFrame((t, delta) => {
+  useAnimationFrame((_t, delta) => {
     let moveBy = directionFactor.current * baseVelocity * (delta / 1000)
 
     /**
@@ -66,16 +66,9 @@ const ParallaxText: React.FC<ParallaxProps> = ({
    * dynamically generated number of children.
    */
   return (
-    <div
-      className="
-        m-0 flex flex-nowrap overflow-hidden font-plaster leading-[0.8]
-        tracking-tight whitespace-nowrap
-      "
-    >
+    <div className="m-0 flex flex-nowrap overflow-hidden whitespace-nowrap font-plaster leading-[0.8] tracking-tight">
       <motion.div
-        className="
-          flex flex-nowrap text-7xl font-semibold whitespace-nowrap uppercase
-        "
+        className="flex flex-nowrap whitespace-nowrap font-semibold text-7xl uppercase"
         style={{ x }}
       >
         <span className="mr-8 block">{children} </span>
